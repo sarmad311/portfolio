@@ -125,19 +125,22 @@
         }
 
         .profile-container {
-            width: 280px;
-            height: 280px;
+            width: 200px; /* Reduced from 280px */
+            height: 200px; /* Reduced from 280px */
             border-radius: 50%;
             position: relative;
             overflow: hidden;
             border: 3px solid var(--primary);
             box-shadow: 0 0 40px rgba(0,255,136,0.2);
             animation: float 6s ease-in-out infinite;
+            margin: 0 auto; /* Center the container */
         }
 
         @media (min-width: 768px) {
             .profile-container {
-                margin-right: 110px;
+                width: 280px;
+                height: 280px;
+                margin-right: 110px; /* Only apply right margin on desktop */
             }
         }
 
@@ -153,7 +156,38 @@
             filter: grayscale(10%);
         }
 
+        @media (max-width: 767px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1rem;
+                height: auto;
+                min-height: 100vh;
+            }
+    
+            .header-content {
+                margin-top: 2rem;
+                padding: 0 1rem;
+            }
+    
+            .name {
+                font-size: 2.5rem;
+                margin: 1rem 0;
+            }
+    
+            .title {
+                font-size: 1.2rem;
+            }
+    
+            .contact-info {
+                margin-top: 1rem;
+            }
+        }
+
+
         .header-content {
+            margin-left: 5%;
+            margin-right: 10%;
             text-align: center;
             margin-top: 2rem;
         }
